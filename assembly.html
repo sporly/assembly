@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" />设置viewport，适应移动设备的显示宽度-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes"/><!--隐藏safari导航栏及工具栏-->
+		<meta property="qc:admins" content="13666753740606375" />
+		<meta property="wb:webmaster" content="02d1e0af77e62d70" />
+		<title>钱富宝下载</title>
+		<link href="css/css.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script><!--不用这个倒计时则不能用-->
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script><!--使之自动轮播-->
+		<script type="text/javascript" src="js/hhSwipe.js"></script><!--轮播-->
+		<script type="text/javascript" src="js/countdown.js"></script><!--倒计时-->
+		
+	</head>
+	<body>
+	      <div class="mod_container">
+			  <!--表单 S-->
+			   <form class="form" action="#" method="post" name="表单名称">
+				   <!--输入号码S-->
+				   <div class="input-box-wrap">
+						 <div class="input-box">
+							 <label for="phone" class="label">Male</label>
+							 <div class="in-input-box"><input type="text" name="phone" id="phone" value="" /></div>
+						 </div>
+					    <div class="err">报错</div>
+				   </div>
+				   <!--输入号码E-->
+
+				   <!--验证码S-->
+				   <div class="input-wrap">
+					   <div class="input-box">
+						   <label class="label">短信验证码</label>
+						   <div class="in-input-box"><input  id="verify" type="text"></div>
+						   <button type="button" class="verify-btn">获取验证码</button>
+					   </div>
+					   <div class="err">报错</div>
+				   </div>
+				   <!--验证码E-->
+				   <!--radio S-->
+				   <div class="radio-box">
+					   <div class="in-radio-box">
+						   <div class="tag">Radio Small</div>
+						  <div class="button-holder">
+							  <input type="radio"   id="radio-1-1" name="radio-1-set" class="regular-radio" checked /><label for="radio-1-1"></label>
+						  </div>
+					   </div>
+					   <div class="in-radio-box">
+						   <div class="tag">Radio Big</div>
+						  <div class="button-holder">
+							  <input type="radio" id="radio-2-1" name="radio-1-set" class="regular-radio big-radio" checked /><label for="radio-2-1"></label>
+						  </div>
+					   </div>
+				   </div>
+				   <!--radio E-->
+				   <!--checkbox S-->
+				   <div class="checkbox-box">
+					   <div class="tag">Checkbox Small</div>
+					   <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" /><label class="check-label" for="checkbox-1-1"></label>
+				   </div>
+				   <div class="checkbox-box2">
+					   <input type="checkbox" name="DeliveryAddress[is_default]" value="1" id="checkbox-10-1">
+					   <label for="checkbox-10-1"></label>
+					   <input type="checkbox" name="DeliveryAddress[is_default]" value="1" id="checkbox-10-2">
+					   <label for="checkbox-10-2"></label>
+				   </div>
+				   <!--checkbox E-->
+				   <!--提交按钮 S-->
+				   <button class="submit-btn" id="submit" type="button">
+					   立即注册
+				   </button>
+				   <!--提交按钮 E-->
+			   </form>
+			  <!--表单 E-->
+			  <!--箭头S-->
+			  <div class="arrow-box"><span class="arrow"></span></div>
+			  <div class="arrow-box1"><span class="arrow"></span></div>
+			  <!--适用于ie8-->
+              <div class="arrow-box3">
+				  <span class="triangle-up"></span>
+				  <span class="triangle-up2"></span>
+			  </div>
+			  <!--箭头E-->
+
+              <!--动画S-->
+			  <div class="animation"></div>
+		      <div class="animation-box"><span class="circle1"></span><span class="circle2"></span><i></i></div>
+              <div class="animation-box3"><!--<i>.</i><i>.</i><i>.</i>--></div>
+              <span class="dotting"></span>
+			  <!--动画E-->
+
+			  <!--弹框S-->
+			  <div class="bomb-btn">弹框</div>
+			  <div class="bomb-box">
+				  <div class="bomb-bg">
+				  </div>
+				  <div class="bomb-main">
+				  </div>
+			  </div>
+			  <!--弹框E-->
+			  <!--居中S-->
+			  <div class="clearfix"><div class="f"><div id="zi"><模块居中></模块居中></div></div></div>
+			  <!--居中E-->
+			  <!--叉叉S-->
+			  <div class="close-box"><span class="close" onclick="back()"><i></i></span></div>
+			  <!--叉叉E-->
+			  <div class="width-c">@media</div>
+			  <!--三角形 S-->
+			  <div class="clearfix m-t30"><i class="angle"></i></div>
+			  <!--三角形 E-->
+			  
+			  <!--轮播 S-->
+			  <div class="slider-box">
+			  	  <!-- banner S-->
+				<div class="addWrap">
+					<div class="swipe" id="mySwipe">
+						<div class="swipe-wrap">
+							<div><a href="javascript:;"><img class="img-responsive" src="img/banner1.png"/></a></div>
+							<div><a href="javascript:;"><img class="img-responsive" src="img/banner2.png" /></a></div>
+							<div><a href="javascript:;"><img class="img-responsive" src="img/banner3.png"/></a></div>
+						</div>
+					</div>
+
+					<ul id="position">
+						<li class="cur"></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+                <!-- banner E-->
+			  </div>
+			  <!--轮播 E-->
+			  
+			  <!--菜单 S-->
+				<div class="menu">
+					<ul class="menu-list">
+						<li>
+							<a href="ztglist.html" class="menu-btn menu-btn1">
+								<span class="menu-icon"></span>
+								<span class="menu-txt">主题馆</span>
+							</a>
+						</li>
+						<li>
+							<a href="jxtm.html" class="menu-btn menu-btn2">
+								<span class="menu-icon"></span>
+								<span class="menu-txt">精选特卖</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="menu-btn menu-btn3">
+								<span class="menu-icon"></span>
+								<span class="menu-txt">米券专区</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="menu-btn menu-btn4">
+								<span class="menu-icon"></span>
+								<span class="menu-txt">钱富宝</span>
+							</a>
+						</li>
+					</ul>
+
+				</div>
+			  <!--菜单 E-->
+			  
+			  <!--倒计时 S-->
+			  <div class="countdown-box">
+			  	   <div class="count">
+						<div id="countdown">
+							<span class="hours timebox">00</span>
+							<span class="lines">:</span>
+							<span class="minutes timebox">00</span>
+							<span class="lines">:</span>
+							<span class="seconds timebox fl">00</span>
+						</div>
+					</div>
+			  </div>
+			  <!--倒计时 E-->
+			  
+			  <!--商品 S-->
+			  <section class="goods-box">
+			  	<ul class="goods clearfix">
+			  		<li>
+			  			<a href="">
+			  			   <img src="img/pr03.jpg"/>
+			  			   <div class="goods-txt">
+			  			   	   <h3 class="goods-name">台湾第一健康品牌—美行家火龍晶純瞬效面膜5片装</h3>
+			  			   	   <span class="good-price">商汇价:￥198.00</span>
+			  			   </div>
+			  		    </a>
+			  		</li>
+			  		<li>
+			  			<a href="">
+			  			   <img src="img/pr03.jpg"/>
+			  			   <div class="goods-txt">
+			  			   	   <h3 class="goods-name">台湾第一健康品牌—美行家火龍晶純瞬效面膜5片装</h3>
+			  			   	   <span class="good-price">商汇价:￥198.00</span>
+			  			   </div>
+			  		    </a>
+			  		</li>
+			  	</ul>
+			  </section>
+			  <!--商品 E-->
+			  <!--tab切换  S -->
+			    <div class="tab-box">
+					<ul class="tab-menu">
+						<li><a href="javascript::(viod)" class="cur"><span>全部订单</span></a></li>
+						<li><a href="javascript::(viod)" ><span>待付款<sup class="sup">1</sup></span></a></li>
+						<li><a href="javascript::(viod)"><span >待收货<sup class="sup">1</sup></span></a></li>
+						<li><a href="javascript::(viod)"><span >待评价<sup class="sup">2</sup></span></a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-item">
+							1
+						</div>
+						<div class="tab-item">
+							2
+						</div>
+						<div class="tab-item">
+							3
+						</div>
+						<div class="tab-item">
+							4
+						</div>
+					</div>
+				</div>
+			  <!--tab切换  E -->
+			  
+			  <!--文字滚动 S-->
+				<div class="shell-box">
+					<div class="shell">
+						<div id="shellmain">
+							<a href="javascript:">jQuery的图片滚动切换插件</a>
+							<a href="javascript:">Mootools slider 滚动条拖动取值的实现 </a>
+							<a href="javascript:">VB开发的Eclipse编程软件完整版</a>
+							<a href="javascript:">VC++生成随机数并快速排序的算法</a>
+							<a href="javascript:">VB语音报数计算器源程序</a>
+						</div>
+					<div>
+				</div>
+			  <!--文字滚动 E-->
+		  </div>
+  
+  <script type="text/javascript">
+   /*倒计时 begin*/
+	$(document).ready(function () {
+
+		$("#countdown").countdown({
+				date: "2016/4/3 00:00:00",
+				format: "on"
+			},
+			function () {
+				// callback function
+			});
+
+	});
+	 /*倒计时 end*/
+  	    /*轮播 S*/
+			var bullets = document.getElementById('position').getElementsByTagName('li');
+			var banner = Swipe(document.getElementById('mySwipe'), {
+				auto: 4000,
+				continuous: true,
+				disableScroll:false,
+				callback: function(pos) {
+					var i = bullets.length;
+					var iw= bullets.length;
+					while (i--) {
+						bullets[i].className = ' ';
+					}
+					bullets[pos%iw].className = 'cur';
+				}
+			})
+		/*轮播 E*/
+        
+/*tab-box切换 S*/
+$(document).ready(function(){
+   	
+
+	//定义索引：tab页签li与内容div的索引一一对应
+	var index;
+
+	//定义定时器对象
+	var timeId = null;
+
+	//tab页签li与内容div的jQuery对象变量
+	var $lis = $(".tab-menu>li");
+	var $divs = $(".tab-item");
+
+	//为每个tab页签li绑定鼠标滑过事件
+	$lis.click(function(){
+		/*alert();*/
+		//保存当前li对象
+		$that = $(this);
+
+		//如果存在准备执行的定时器，立刻清除，只有当前停留时间大于500毫秒才执行
+		if(timeId){
+			clearTimeout(timeId);
+			timeId = null;
+		}
+
+		//延迟半秒执行
+		timeId = setTimeout(function(){
+
+			//获得当前tab页签的索引
+			index = $that.index();
+
+			//设置当前tab页签高亮显示
+			$that.find('a').addClass("cur").parent('li').siblings().find('a').removeClass("cur");
+			//设置对应的内容div显示
+			$divs.eq(index).show().siblings().hide();
+		},500);
+
+	});
+});
+/*tab-box切换 E*/
+
+/*文字滚动shell S*/
+var c,_=Function;
+with(o=document.getElementById("shellmain")){ innerHTML+=innerHTML; onmouseover=_("c=1"); onmouseout=_("c=0");}
+(F=_("if(#%18||!c)#++,#%=o.scrollHeight>>1;setTimeout(F,#%18?10:1500);".replace(/#/g,"o.scrollTop")))();
+/*文字滚动shell E*/
+  </script>
+	</body>
+
+</html>

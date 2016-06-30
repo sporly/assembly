@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" />设置viewport，适应移动设备的显示宽度-->
+		<!--<script type="text/javascript" src="jquery-1.9.1.js"></script>-->
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="laypage.js"></script>
+		<script type="text/javascript" src="highcharts.js"></script>
+		
+		<title>highchart</title>
+	</head>
+
+	<body>
+		<div id="container" style="min-width:400px;height:400px;"></div>
+	</body>
+	<script>
+$(function () {
+    // create the chart
+    $('#container').highcharts({
+    	title:{
+    		text:'折线图'
+    	},
+    	subtitle:{
+    		text:'点线图'
+    	},
+        chart: {
+            events: {
+                click: function (event) {
+                    var label = this.renderer.label(
+                            'x: ' + Highcharts.numberFormat(event.xAxis[0].value, 2) + ', y: ' + Highcharts.numberFormat(event.yAxis[0].value, 2),
+                            event.xAxis[0].axis.toPixels(event.xAxis[0].value),
+                            event.yAxis[0].axis.toPixels(event.yAxis[0].value)
+                        )
+                            .attr({
+                                fill: Highcharts.getOptions().colors[0],
+                                padding: 10,
+                                r: 5,
+                                zIndex: 8
+                            })
+                            .css({
+                                color: '#FFFFFF'
+                            })
+                            .add();
+
+                    setTimeout(function () {
+                        label.fadeOut();
+                    }, 1000);
+                }
+            }
+        },
+
+        series: [{
+            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+        }]
+    });
+});
+	</script>
+
+</html>
